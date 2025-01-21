@@ -1,0 +1,90 @@
+/* Base header styles */
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #1A1A2E;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+.left-section {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #D1D8E0;
+  margin-left: 40px;
+}
+.left-section:hover {
+  color: #a1a8b1;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.nav-control {
+  margin-right: 40px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #D1D8E0;
+  text-decoration: none;
+}
+
+.nav-control:hover {
+  color: #a1a8b1;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto; /* Allow the height to adjust based on content */
+    padding: 10px;
+  }
+
+  .left-section {
+    font-size: 20px;
+    margin-bottom: 10px;
+	margin-left: 0;
+  }
+
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Take full width */
+    margin-top: 10px;
+  }
+
+  .nav-control {
+    margin-right: 0;
+    margin-bottom: 15px; /* Add space between links */
+    font-size: 16px;
+  }
+}
+
+/* Media query for smaller mobile devices */
+@media screen and (max-width: 480px) {
+  .left-section {
+    font-size: 18px; /* Reduce the font size for very small screens */
+  }
+
+  .nav-control {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+}
+
+

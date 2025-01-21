@@ -1,0 +1,144 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.proj {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #1A1A2E;
+  text-decoration: underline;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Default: 3 columns */
+  gap: 30px;
+  row-gap: 30px;
+  justify-items: center;
+}
+
+.project-box {
+  width: 420px;  /* Fixed width for the project box */
+  height: 270px;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  color: white;
+  padding: 70px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.project-box:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-title {
+  font-family: Poppins;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.project-description {
+  font-family: Poppins;
+  font-size: 1em;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.visit-button {
+  font-family: Poppins;
+  font-weight: 600;
+  padding: 10px 20px;
+  background-color: #40405f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.visit-button:hover {
+  background-color: #2e2e49;
+}
+
+.visit-button:active {
+  background-color: #272741;
+}
+
+.github-button {
+  margin-top: 80px;
+  padding: 15px 25px;
+  border-radius: 40px;
+  border-style: solid;
+  border-color: #1A1A2E;
+  background-color: #eef1f3;
+  color: #1A1A2E;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.github-button:hover {
+  background-color: #1A1A2E;
+  color: #D1D8E0;
+}
+
+.github-button:active {
+  opacity: 0.8;
+}
+
+/* Responsive Adjustments */
+
+/* For screens <= 1024px (Tablets and small laptops) */
+@media (max-width: 900px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1350px) {
+  .project-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (min-width: 1790px) {
+  .project-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
