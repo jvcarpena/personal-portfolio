@@ -70,10 +70,15 @@
   margin-top: 0;
 }
 
+.tech {
+  margin: 0;
+  font-family: cursive;
+}
+
 .project-description {
   font-family: Poppins;
   font-size: 1em;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: 10px;
 }
 
